@@ -10,9 +10,9 @@ class Footer extends PureComponent {
                 <p className="header__title section-title">Footer</p>
                 <p className="footer-message t-footer">
                     <AuthConsumer>
-                        {({ isAuthorized }) =>
+                        {({ isAuthorized, email }) =>
                         isAuthorized ? (
-                            'Вы вошли как test@test.ru'
+                            `Вы вошли как ${email}`
                         ) : (
                             'Вы гость в этой системе'
                         )}

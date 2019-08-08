@@ -8,9 +8,12 @@ import { AuthProvider, AuthConsumer } from '../../contexts/Auth';
 
 class App extends PureComponent {
     render() {
+        const header = <Header />,
+        footer = <Footer />;
+        
         return (
         <AuthProvider>
-            <Layout header={Header} footer={Footer}>
+            <Layout header={header} footer={footer}>
             <AuthConsumer>
                 {({ isAuthorized, authorize, authorizeError }) =>
                 isAuthorized ? (
@@ -20,8 +23,7 @@ class App extends PureComponent {
                     authorize={authorize}
                     authorizeError={authorizeError}
                     />
-                )
-                }
+                )}
             </AuthConsumer>
             </Layout>
         </AuthProvider>

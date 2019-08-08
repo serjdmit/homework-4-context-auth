@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+import SectionTitle from '../SectionTitle';
 import './Layout.css';
 
 class Layout extends PureComponent {
@@ -8,7 +9,7 @@ class Layout extends PureComponent {
             <>
                 {header}
                 <main className={`main ${header && 'main--with-header'} ${footer && 'main--with-footer'}`}>
-                    <p className="main__title section-title">Main</p>
+                    <SectionTitle className="main__title">Main</SectionTitle>
                     {children}
                 </main>
                 {footer}
